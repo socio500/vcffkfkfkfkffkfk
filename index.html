@@ -45,6 +45,14 @@
                 return true;
                 }
                 
+                input.addEventListener("keydown", function(e){
+                    if(input.value.length == 10){
+                        if(e.keyCode != 8){
+                            e.preventDefault();
+                        }
+                    }
+                });
+                
             </script>
 
         </div>
