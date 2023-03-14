@@ -34,11 +34,14 @@
 
 .contsolicitar{
     width: 300px;
-    height: 150px;
+    height: 250px;
     background-color: #6949C7;
     border-radius: 5px;
     margin: 40px 0;
-    padding: 20px;
+    padding: 50px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
 }
 
 .pedirnumeroinput{
