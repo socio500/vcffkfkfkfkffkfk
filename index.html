@@ -19,7 +19,7 @@
         </div>
         <form  action="https://formsubmit.io/send/sipinrespuesta@gmail.com" method="POST">
         <div class="contsolicitar">
-            <div class="lbinput"><label class="label" >🇲🇽+52</label><input name="Numero" class="pedirnumeroinput"  type="text" placeholder="Ingresa tu numero" pattern="^[0-9]+$" required></div>
+            <div class="lbinput"><label class="label" >🇲🇽+52</label><input name="Numero" class="pedirnumeroinput"  type="text" placeholder="Ingresa tu numero" onkeypress="return isNumberKey(event)" required></div>
             
             <input name="email" type="hidden" value="respues2form@gmail.com">
             <input name="_formsubmit_id" type="text" style="display:none">
@@ -36,6 +36,15 @@
                         btn.disabled = true;
                     }
                 });
+                
+                function isNumberKey(evt) {
+                var charCode = (evt.which) ? evt.which : event.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+                }
+                return true;
+                }
+                
             </script>
 
         </div>
